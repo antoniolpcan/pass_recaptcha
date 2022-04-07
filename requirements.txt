@@ -1,0 +1,5 @@
+bs4
+playwright
+speech_recognition
+pydub
+ffmpeg
