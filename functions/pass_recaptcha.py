@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup as bs
 import requests
 from io import BytesIO
-from transcript import *
+from .transcript import *
 
 #captcha
 link_audio_type = 'href'

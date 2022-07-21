@@ -1,6 +1,6 @@
 from playwright.async_api import async_playwright
 import asyncio
-from pass_recaptcha import recaptcha_pass
+from functions.pass_recaptcha import recaptcha_pass
 
 async def main():
     playwright = await async_playwright().start()
@@ -9,8 +9,9 @@ async def main():
 
     i = 0
 
-    while(i<1000):
+    while(i<10):
         await page.goto('https://patrickhlauke.github.io/recaptcha/')
+        await page.wait_for_timeout(2000)
         await page.click("iframe[title='reCAPTCHA']")
         await recaptcha_pass(page)
         i = i + 1
